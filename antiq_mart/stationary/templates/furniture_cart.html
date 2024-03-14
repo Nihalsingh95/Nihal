@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}Categories{% endblock title %}
+
+{% block content %}
+
+<!-- Card-->
+<div class="container " style="padding-top: 80px;">                         <!-- we have created new container class-->
+    <div class="row">                           <!-- we have created row class-->
+        {% for dc in antique_category %}
+        <div class="col-sm-4 ">
+          <a href="{% url "antiquedetails" dc.id %}" style="text-decoration: none; ">        
+            <div class="card furniture_categories_card furniture_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top " src="{{dc.antique_image.url}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{dc.name}}</h5>
+                   <div class="text-center">
+                        <h5 class="font-weight-bold text-dark "><i class="fa-solid fa-indian-rupee-sign"></i>{{dc.discounted_price}} <small class="fw-light rupee"> {{dc.selling_price}}</small> <small class="text-danger">(% off)</small></h5>  
+                    </div>
+                </div>
+            </div>
+          </a>
+        </div>       
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock content %}

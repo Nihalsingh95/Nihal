@@ -1,0 +1,41 @@
+{% load static %}
+<div class="container mt-5 x">
+    <h1>Antique Categories </h1>
+</div>
+    <div class="container mt-4">
+        <div class="card-deck">
+         
+          <a href="{% url "furniturecart" %}" class = "card-img-href" style="text-decoration: none; ">
+            <div class="card ml-5 mt-5 mb-5" style="width: 18rem;">
+                <img class="card-img-top" src="static\images\antique-furniture.jpeg" alt="Card image cap">
+                <div class="card-body" style= "">
+                  <p class="card-text"> Antique Heritage Furniture</p>
+                </div>
+              </div>
+            </a>
+          
+
+
+          <a href="{% url 'artcart' %}" class = "card-img-href" style="text-decoration: none; ">
+              <div class="card ml-5 mt-5 mb-5" style="width: 18rem;">
+                <img class="card-img-top" src="static\images\.jpg" alt="Card image cap">
+                <div class="card-body" style= "">
+                  <p class="card-text"> Antique Heritage Art </p>
+                </div>
+              </div>
+          </a>
+         
+
+
+          <a href="{% url "instrumentcart" %}" class = "card-img-href" style="text-decoration: none; ">
+              <div class="card ml-5 mt-5 mr-5" style="width: 18rem;">
+                <img class="card-img-top" src="static/images/4872_label.jpg" alt="Card image cap">
+                <div class="card-body" style= "">
+                  <p class="card-text"> Antique Heritage instrument </p>
+                </div>
+              </div>
+          </a>
+         
+          
+        </div>
+    </div>
