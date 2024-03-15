@@ -141,7 +141,7 @@ def add_to_cart(request, id):    # This 'id' is coming from 'pet.id' which hold 
 def view_cart(request):
     cart_items = Cart.objects.filter(user=request.user)      # cart_items will fetch product of current user, and show product available in the cart of the current user.
     total =0
-    delhivery_charge =2000
+    delhivery_charge =100
     for item in cart_items:
         item.product.price_and_quantity_total = item.product.discounted_price * item.quantity
         total += item.product.price_and_quantity_total
@@ -220,7 +220,7 @@ def payment(request):
 
     cart_items = Cart.objects.filter(user=request.user)      # cart_items will fetch product of current user, and show product available in the cart of the current user.
     total =0
-    delhivery_charge =2000
+    delhivery_charge =150
     for item in cart_items:
         item.product.price_and_quantity_total = item.product.discounted_price * item.quantity
         total += item.product.price_and_quantity_total

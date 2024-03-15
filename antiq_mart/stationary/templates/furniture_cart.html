@@ -11,7 +11,7 @@
         {% for dc in antique_category %}
         <div class="col-sm-4 ">
           <a href="{% url "antiquedetails" dc.id %}" style="text-decoration: none; ">        
-            <div class="card furniture_categories_card furniture_card" style="width: 18rem; height:20rem">
+            <div class="card furniture_categories_card furniture_card mb-4" style="width: 20rem; height:30rem">
                 <img class="card-img-top " src="{{dc.antique_image.url}}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{dc.name}}</h5>
